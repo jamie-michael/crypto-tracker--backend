@@ -13,6 +13,16 @@ router.get('/', async (req, res) => {
 	}
 });
 
+// Get specific coin
+router.get('/:coinID', async (req, res) => {
+  try {
+		const coins = await Coin.find({ _id: req.params.coinID });
+    res.json(coins);
+  } catch (err) {
+    res.json({ message: err })
+  }
+});
+
 // Add new coin
 router.post('/', async (req, res) => {
 	const coin = new Coin({
@@ -34,6 +44,6 @@ router.delete('/:coinID', async (req, res) => {
   } catch (err) {
     res.json({ message: err })
   }
-})
+});
 
 module.exports = router;
