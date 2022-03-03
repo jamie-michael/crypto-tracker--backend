@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+* {
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1f2630;
+    color: #ebeff2;
+    overflow-y: overlay;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+button {
+    border:  none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #313842;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	/* background: #b1b1b1;  */
+	background: #36A0FC;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #216199;
+}
+.tiny-image-render {
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 61px;
+    border-bottom:  #313842 solid 1px;
+    background: #1f2630;
+    box-shadow: 1px 6px 15px 0px rgba(24,31,39,0.79);
+    -webkit-box-shadow: 1px 6px 15px 0px rgba(24,31,39,0.79);
+    -moz-box-shadow: 1px 6px 15px 0px rgba(24,31,39,0.79);
+}
+
+.header-placeholder {
+    height: 61px;
+}
+
+.header h1 {
+    color: #36A0FC;
+}
+
+.header .logo {
+    height: 50px;
+}
+
+.header .one-third {
+    height: 100%;
+}
+
+.nav-btn {
+    color: #36A0FC;
+    background: none;
+    padding: 0.9rem;
+    height: 100%;
+    transform: skewX(-15deg);
+    cursor: pointer;
+
+}
+.nav-btn.active {
+    color: #fff;
+    background: #36A0FC ;
+}
+
+.nav-btn:hover.active{
+    background: #36A0FC ;
+}
+.nav-btn:hover {
+    /* color: #ebeff2; */
+    background: #1C222B;
+}
+
+.nav-btn > div {
+    transform: skewX(15deg);
+}
+
+.nav-btn i {
+    margin-right: 0.4rem;
+}
+
+.search-box .search-input {
+    background: #181f27;
+    color: #ebeff2;
+    padding: 15px;
+    border: #181f27 1px solid;
+    width: 300px;
+}.search-box .search-input:focus {
+    /* border: #3E4754 1px solid; */
+}.search-box .search-input:hover {
+    border: #313842 1px solid;
+    
+}
+
+.input-box {
+    position: relative;
+} 
+
+.close-search-input {
+    color: #5b616d;
+    position: absolute;
+    left: 265px;
+    top: 13px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 46px;
+    width: 300px;
+    display: none;
+    overflow-y: hidden;
+    background: #181f27;
+    border: solid 1px #313842;
+    border-top: #fff;
+    box-shadow: 5px 10px 9px -6px rgba(51,51,51,0.07);
+    -webkit-box-shadow: 5px 10px 9px -6px rgba(51,51,51,0.07);
+    -moz-box-shadow: 5px 10px 9px -6px rgba(51,51,51,0.07);
+    height: 300px;
+    padding: 0 0 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+.backdrop  {
+    position: fixed;
+    top: 0;
+    opacity: 0%;
+    display: none;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.match-list--wrapper {
+    margin-top: 1.5rem;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top: #313842 1px solid;
+}
+
+.match-list {
+    height: 100%;
+    width: 100%;
+
+}
+.search-results li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    padding: 0.5rem;
+    max-width: 300px;
+    cursor: pointer;
+} li:hover {
+    background: #1f2630;}
+
+.search-results li img {
+    width: 18px;
+    margin-right: 0.5rem;
+}
+
+.search-results li .rank {
+    font-size: 0.7rem;
+    color: #757c8e;
+}
+
+main {
+    margin-top: 81px;
+}
+
+.tracker-list, .market-list {
+    height: 100%;
+    display: none;
+    width: 600px;
+}
+
+
+
+
+
+.tracker-list .element, .market-list .element {
+    display: grid;
+    grid-template-columns: 7% 10% 15% 25% 15% 20% 8%;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    justify-content: left;
+    align-items: center;
+    text-align:left;
+    overflow: hidden;
+    max-height: 60px;
+    cursor: pointer;
+    
+} 
+
+
+.tracker-list .element:hover, .market-list .element:hover {
+    background: #012F56;
+}
+.tracker-list .element .grid-item, .market-list .element .grid-item {
+    justify-content: left;
+}
+
+.tracker-list .name, .market-list .name {
+    font-weight: bold;
+    padding-left: 10px;
+    word-wrap: break-word;
+}
+.tracker-list .rank, .market-list .rank {
+    font-size: 0.7rem;
+}
+.tracker-list .symbol, .market-list .symbol {
+    padding-left: 5px;
+    font-size: 0.7rem;
+}
+
+.tracker-list .image, .market-list .image {
+    justify-content: center;
+    text-align: center;
+}
+.tracker-list .image img, .market-list .image img {
+    height: 20px;
+}
+.tracker-list .price, .market-list .price {
+    padding-left: 5px;
+}
+
+.tracker-list .delete, .market-list .track {
+    text-align: center;
+    color: #2d73b1;
+}
+.market-list .track > i:hover,
+.tracker-list .delete > i:hover {
+    color: #ebeff2;
+}
+
+.tracker-list .delete-btn, .market-list .add-to-tracker--btn, .market-list .remove-from-tracker--btn {
+    cursor: pointer;
+    padding: 3px;
+}
+
+.tracker-list .twenty-four-hr--change i, .market-list .twenty-four-hr--change i {
+    padding-right: 5px;
+}
+
+.no-coins {
+    display: none;
+    width: 200px;
+}
+
+.no-coins img {
+    width: 100%;
+    height: 100%;
+}
+
+.spinner {
+    font-size: 2rem;
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    
+}
+
+@keyframes spin {
+	0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+
+}
+
+.pulse {
+	animation-name: pulse;
+	animation-duration: 0.8s;
+	animation-delay: 0.3s;
+	animation-direction: forwards;
+}
+
+
+
+

@@ -39,6 +39,7 @@ router.post('/', async (req, res) => {
 // Delete coin
 router.delete('/:coinID', async (req, res) => {
   try {
+    console.log('DELETE')
     const removeCoin =  await Coin.remove({ _id: req.params.coinID });
     res.json(removeCoin);
   } catch (err) {

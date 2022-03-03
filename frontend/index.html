@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="stylesheet" href="/utilities.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header flex-item">
+			<div class="one-third flex-item">
+				<!-- <h1>CT</h1> -->
+				<img class="logo" src="/img/logo.png" alt="">
+			</div>
+			<div class="backdrop"></div>
+
+			<div class="one-third flex-item">
+				<div class="search-box">
+					<div class="input-box">
+						<i class="fa-solid fa-circle-xmark close-search-input"></i>
+						<input type="text" class="search-input" placeholder="Search..." />
+					</div>
+
+					<div class="search-results">
+						<div class="match-list--wrapper">
+							<ul class="match-list"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="one-third flex-item">
+				<!-- <button class="btn btn-primary market-nav--btn">
+					<i class="fa-solid fa-chart-column"></i> Market
+				</button>
+				<button class="btn btn-primary tracker-nav--btn">
+					<i class="fa-solid fa-list-ul"></i> Tracker
+				</button> -->
+				<button class="nav-btn market-nav--btn">
+					<div class="flex-item">
+						<i class="fa-solid fa-chart-column"></i>
+						<p>Market</p>
+					</div>
+				</button>
+				<button class="nav-btn tracker-nav--btn">
+					<div class="flex-item">
+						<i class="fa-solid fa-list-ul"></i>
+						<p>Tracker</p>
+					</div>
+				</button>
+			</nav>
+		</header>
+
+		<main class="flex-item">
+			<div class="no-coins">
+				<img src="/img/no-coins1.png" alt="">
+			</div>
+			<ul class="tracker-list"></ul>
+			<ul class="market-list"></ul>
+		</main>
+		<div class="backdrop"></div>
+	</body>
+	<script src="/app.js"></script>
+</html>
