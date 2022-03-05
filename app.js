@@ -31,7 +31,6 @@ app.use(express.static('public'));
 
 // Routes
 app.get('/', (req, res) => {
-  
   res.sendFile(path.resolve('./frontend/index.html'));
 });
 
