@@ -20,8 +20,10 @@ mongoose
 
 // Import Routes
 const coinsRoute = require('./routes/coins');
-const FrontendRoute = require('./routes/frontend'); 
-const { Console } = require('console');
+// const FrontendRoute = require('./routes/frontend'); 
+
+
+
 
 // Middleware
 app.use(morgan('dev'));

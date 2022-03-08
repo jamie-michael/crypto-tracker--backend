@@ -24,7 +24,8 @@ let activeElement;
 let trackerDataCache = [];
 let databaseCache = [];
 
-const loadingSpinner = '<i class="fa-solid fa-spinner spinner"></i>';
+// const loadingSpinner = '<i class="fa-solid fa-spinner spinner"></i>';
+const loadingSpinner = '<img src="/spinner.svg" class="spinner" alt="">';
 
 const intToString = (num) => {
 	num = num.toString().replace(/[^0-9.]/g, '');

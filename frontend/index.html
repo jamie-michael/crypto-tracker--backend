@@ -11,8 +11,8 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="/public/style.css" />
-		<link rel="stylesheet" href="/public/utilities.css" />
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="stylesheet" href="/utilities.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -21,46 +21,48 @@
 	</head>
 	<body>
 		<header class="header flex-item">
-			<div class="one-third flex-item">
-				<!-- <h1>CT</h1> -->
-				<img class="logo" src="/public/img/logo.png" alt="">
-			</div>
-			<div class="backdrop"></div>
+			<div class="container flex-item">
+				<div class="one-third flex-item">
+					<!-- <h1>CT</h1> -->
+					<img class="logo" src="/img/logo.png" alt="" />
+				</div>
+				<div class="backdrop"></div>
 
-			<div class="one-third flex-item">
-				<div class="search-box">
-					<div class="input-box">
-						<i class="fa-solid fa-circle-xmark close-search-input"></i>
-						<input type="text" class="search-input" placeholder="Search..." />
-					</div>
+				<div class="one-third flex-item">
+					<div class="search-box">
+						<div class="input-box">
+							<i class="fa-solid fa-circle-xmark close-search-input"></i>
+							<input type="text" class="search-input" placeholder="Search..." />
+						</div>
 
-					<div class="search-results">
-						<div class="match-list--wrapper">
-							<ul class="match-list"></ul>
+						<div class="search-results">
+							<div class="match-list--wrapper">
+								<ul class="match-list"></ul>
+							</div>
 						</div>
 					</div>
 				</div>
+				<nav class="one-third flex-item">
+					<!-- <button class="btn btn-primary market-nav--btn">
+						<i class="fa-solid fa-chart-column"></i> Market
+					</button>
+					<button class="btn btn-primary tracker-nav--btn">
+						<i class="fa-solid fa-list-ul"></i> Tracker
+					</button> -->
+					<button class="nav-btn market-nav--btn">
+						<div class="flex-item">
+							<i class="fa-solid fa-chart-column"></i>
+							<p>Market</p>
+						</div>
+					</button>
+					<button class="nav-btn tracker-nav--btn">
+						<div class="flex-item">
+							<i class="fa-solid fa-list-ul"></i>
+							<p>Tracker</p>
+						</div>
+					</button>
+				</nav>
 			</div>
-			<nav class="one-third flex-item">
-				<!-- <button class="btn btn-primary market-nav--btn">
-					<i class="fa-solid fa-chart-column"></i> Market
-				</button>
-				<button class="btn btn-primary tracker-nav--btn">
-					<i class="fa-solid fa-list-ul"></i> Tracker
-				</button> -->
-				<button class="nav-btn market-nav--btn">
-					<div class="flex-item">
-						<i class="fa-solid fa-chart-column"></i>
-						<p>Market</p>
-					</div>
-				</button>
-				<button class="nav-btn tracker-nav--btn">
-					<div class="flex-item">
-						<i class="fa-solid fa-list-ul"></i>
-						<p>Tracker</p>
-					</div>
-				</button>
-			</nav>
 		</header>
 
 		<main class="flex-item">
@@ -69,5 +71,5 @@
 		</main>
 		<div class="backdrop"></div>
 	</body>
-	<script type="module" src="/public/app.js"></script>
+	<script type="module" src="/app.js"></script>
 </html>
